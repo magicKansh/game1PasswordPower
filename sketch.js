@@ -110,6 +110,9 @@ const MOUTHS = {
 };
 const BUILDINGS = [90, 150, 70, 190, 120, 80, 165, 110, 135, 60, 140, 95];
 
+// Where the "All games" button sends players
+const WEBSITE_URL = "https://magickansh.github.io/camGames-CyberherosWebsite/";
+
 let scene = "title"; // title, office, choice, walking, report, ending
 let clients = [];
 let current = null;  // the client being helped right now
@@ -313,7 +316,7 @@ function drawEnding() {
   fill(C.muted); textFont(BODY); textSize(17); text(`Your score: ${s} / 6`, 480, 444);
 
   button("Play again", 250, 490, 210, 56, newGame);
-  button("All games", 500, 490, 210, 56, () => { window.location.href = "../../index.html"; });
+  button("All games", 500, 490, 210, 56, () => { window.location.href = WEBSITE_URL; });
 }
 
 // ---------- Drawing helpers ----------
